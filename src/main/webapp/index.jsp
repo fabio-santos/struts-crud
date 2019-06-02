@@ -14,7 +14,6 @@
 </style>
 </head>
 <body>
-	<s:debug />
 	<br><br>
 	<div class="container">
 		<div class="row">
