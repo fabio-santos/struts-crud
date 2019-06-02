@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="default" extends="struts-default">
+		<action name="index" method="list" class="com.soc.exames.action.ExameAction">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="saveExame" method="saveExame" class="com.soc.exames.action.ExameAction">
+			<result name="success" type="redirect">index</result>
+		</action>
+		<action name="updateExame" method="updateExame" class="com.soc.exames.action.ExameAction">
+			<result name="success" type="redirect">index</result>
+		</action>
+		<action name="editExame" method="editExame" class="com.soc.exames.action.ExameAction">
+			<result name="success">/update.jsp</result>
+		</action>
+		<action name="deleteExame" method="deleteExame" class="com.soc.exames.action.ExameAction">
+			<result name="success" type="redirect">index</result>
+		</action>
+	</package>
+</struts>
