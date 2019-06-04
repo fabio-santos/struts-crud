@@ -50,11 +50,8 @@ public class ExameDao {
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (connection != null) {
-				connection.close();
-			}
 		}
+		
 		return exame;
 	}
 	
@@ -76,11 +73,8 @@ public class ExameDao {
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (connection != null) {
-				connection.close();
-			}
 		}
+		
 		return exame;
 	}
  
@@ -92,10 +86,6 @@ public class ExameDao {
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (connection != null) {
-				connection.close();
-			}
 		}
     }
  
@@ -121,10 +111,6 @@ public class ExameDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
-		} finally {
-			if (connection != null) {
-				connection.close();
-			}
 		}
          
         return exame;
@@ -154,10 +140,6 @@ public class ExameDao {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (connection != null) {
-				connection.close();
-			}
 		}
         
         return examesList;
