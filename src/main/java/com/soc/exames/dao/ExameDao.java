@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.soc.exames.util.DatabaseUtil;
 import com.soc.exames.domain.Exame;
+import com.soc.exames.amqp.ExameAmqp;
 
 /*
 CREATE TABLE EXAME (
@@ -24,6 +25,7 @@ CREATE TABLE EXAME (
 
 public class ExameDao {
 	
+	private static ExameAmqp exameamqp = new ExameAmqp();
 	private static ExameDao exameDao = null;
 	private static Connection connection = null;
 	
@@ -52,6 +54,7 @@ public class ExameDao {
 			e.printStackTrace();
 		}
 		
+		exameamqp.newExame(exame);		
 		return exame;
 	}
 	
@@ -75,6 +78,7 @@ public class ExameDao {
 			e.printStackTrace();
 		}
 		
+		exameamqp.updateExame(exame);
 		return exame;
 	}
  
